@@ -56,7 +56,7 @@
       </CSVDataSet>
       <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group_Acoount_summary">
-        <intProp name="ThreadGroup.num_threads">5</intProp>
+        <intProp name="ThreadGroup.num_threads">50</intProp>
         <intProp name="ThreadGroup.ramp_time">5</intProp>
         <longProp name="ThreadGroup.duration">300</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
@@ -510,7 +510,7 @@ def file = new File(&quot;C:/Users/Yasaswini/OneDrive/Desktop/Jmeter/File_extrac
         </hashTree>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group_DD_Request">
-        <intProp name="ThreadGroup.num_threads">5</intProp>
+        <intProp name="ThreadGroup.num_threads">25</intProp>
         <intProp name="ThreadGroup.ramp_time">5</intProp>
         <longProp name="ThreadGroup.duration">300</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
@@ -1346,7 +1346,7 @@ log.info(&quot;Written to file -&gt; p_amount: ${p_amount}, c_commision: ${c_com
         </hashTree>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group_Fund_Transfer">
-        <intProp name="ThreadGroup.num_threads">5</intProp>
+        <intProp name="ThreadGroup.num_threads">125</intProp>
         <intProp name="ThreadGroup.ramp_time">5</intProp>
         <longProp name="ThreadGroup.duration">300</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
@@ -2681,7 +2681,7 @@ if (balance &lt; payAmount) {
         </hashTree>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group_Statements">
-        <intProp name="ThreadGroup.num_threads">5</intProp>
+        <intProp name="ThreadGroup.num_threads">25</intProp>
         <intProp name="ThreadGroup.ramp_time">5</intProp>
         <longProp name="ThreadGroup.duration">300</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
@@ -3376,7 +3376,7 @@ if (balance &lt; payAmount) {
         </hashTree>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group_Loans_Apply">
-        <intProp name="ThreadGroup.num_threads">5</intProp>
+        <intProp name="ThreadGroup.num_threads">15</intProp>
         <intProp name="ThreadGroup.ramp_time">5</intProp>
         <longProp name="ThreadGroup.duration">300</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
@@ -5068,7 +5068,7 @@ else
         </hashTree>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group_Cards_Apply">
-        <intProp name="ThreadGroup.num_threads">5</intProp>
+        <intProp name="ThreadGroup.num_threads">10</intProp>
         <intProp name="ThreadGroup.ramp_time">5</intProp>
         <longProp name="ThreadGroup.duration">300</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
@@ -6778,33 +6778,13 @@ else
         <collectionProp name="prometheus.collector_definitions">
           <elementProp name="" elementType="com.github.johrstrom.listener.ListenerCollectorConfig">
             <stringProp name="collector.help">default help string</stringProp>
-            <stringProp name="collector.metric_name">jmeter_rt</stringProp>
+            <stringProp name="collector.metric_name">jmeter_rt_</stringProp>
             <stringProp name="collector.type">SUMMARY</stringProp>
             <collectionProp name="collector.labels">
               <stringProp name="102727412">label</stringProp>
             </collectionProp>
             <stringProp name="collector.quantiles_or_buckets">0.75,0.5|0.95,0.1|0.99,0.01</stringProp>
             <stringProp name="listener.collector.measuring">ResponseTime</stringProp>
-          </elementProp>
-          <elementProp name="" elementType="com.github.johrstrom.listener.ListenerCollectorConfig">
-            <stringProp name="collector.help">default help string</stringProp>
-            <stringProp name="collector.metric_name">jmeter_idt</stringProp>
-            <stringProp name="collector.type">COUNTER</stringProp>
-            <collectionProp name="collector.labels">
-              <stringProp name="-63201882">label_1</stringProp>
-            </collectionProp>
-            <stringProp name="collector.quantiles_or_buckets"></stringProp>
-            <stringProp name="listener.collector.measuring">IdleTime</stringProp>
-          </elementProp>
-          <elementProp name="" elementType="com.github.johrstrom.listener.ListenerCollectorConfig">
-            <stringProp name="collector.help">default help string</stringProp>
-            <stringProp name="collector.metric_name">jmeter_sr</stringProp>
-            <stringProp name="collector.type">COUNTER</stringProp>
-            <collectionProp name="collector.labels">
-              <stringProp name="-63201881">label_2</stringProp>
-            </collectionProp>
-            <stringProp name="collector.quantiles_or_buckets"></stringProp>
-            <stringProp name="listener.collector.measuring">SuccessRatio</stringProp>
           </elementProp>
         </collectionProp>
       </com.github.johrstrom.listener.PrometheusListener>
