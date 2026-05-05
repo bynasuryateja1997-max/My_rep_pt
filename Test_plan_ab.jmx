@@ -67,7 +67,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
         <hashTree>
           <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Once Only Controller" enabled="true"/>
           <hashTree>
@@ -6784,9 +6784,34 @@ else
               <stringProp name="102727412">label</stringProp>
             </collectionProp>
             <stringProp name="collector.quantiles_or_buckets">0.75,0.5|0.95,0.1|0.99,0.01</stringProp>
+            <stringProp name="listener.collector.measuring">ResponseTime</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="com.github.johrstrom.listener.ListenerCollectorConfig">
+            <stringProp name="collector.help">default help string</stringProp>
+            <stringProp name="collector.metric_name">jmeter_idt</stringProp>
+            <stringProp name="collector.type">COUNTER</stringProp>
+            <collectionProp name="collector.labels">
+              <stringProp name="-63201882">label_1</stringProp>
+            </collectionProp>
+            <stringProp name="collector.quantiles_or_buckets"></stringProp>
+            <stringProp name="listener.collector.measuring">IdleTime</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="com.github.johrstrom.listener.ListenerCollectorConfig">
+            <stringProp name="collector.help">default help string</stringProp>
+            <stringProp name="collector.metric_name">jmeter_sr</stringProp>
+            <stringProp name="collector.type">COUNTER</stringProp>
+            <collectionProp name="collector.labels">
+              <stringProp name="-63201881">label_2</stringProp>
+            </collectionProp>
+            <stringProp name="collector.quantiles_or_buckets"></stringProp>
+            <stringProp name="listener.collector.measuring">SuccessRatio</stringProp>
           </elementProp>
         </collectionProp>
       </com.github.johrstrom.listener.PrometheusListener>
+      <hashTree/>
+      <com.github.johrstrom.config.PrometheusMetricsConfig guiclass="com.github.johrstrom.config.gui.PrometheusMetricsConfigGui" testclass="com.github.johrstrom.config.PrometheusMetricsConfig" testname="Prometheus Metrics" enabled="false">
+        <collectionProp name="prometheus.collector_definitions"/>
+      </com.github.johrstrom.config.PrometheusMetricsConfig>
       <hashTree/>
     </hashTree>
   </hashTree>
